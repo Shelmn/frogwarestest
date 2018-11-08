@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../info.css">
+</head>
+<body>
+<div id="main">
+    <table>
+        <tr>
+            <td><b>Build ID</b></td>
+            <td><b>Platform</b></td>
+            <td><b>Quest Name</b></td>
+        </tr>
+        <tr>
+            <td>{{questinfo.id}}</td>
+            <td>{{questinfo.platform}}</td>
+            <td>{{questinfo.name}}</td>
+        </tr>
+    </table>
+    <h2>Pathways</h2>
+    <table>
+        <tr>
+            <td>Status</td>
+            <td>Path name</td>
+            <td class="center">Leafs info</td>
+        </tr>
+        <tr>
+            <td>{{questinfo.pathway.status}}</td>
+            <td>{{questinfo.pathway.name}}</td>
+            <td v-for="i in leaf" v-if="i">&#10004;</td>
+            <td v-else>&#10006;</td>
+        </tr>
+    </table>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="../info.js"></script>
+</body>
+</html>

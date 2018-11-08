@@ -1,0 +1,27 @@
+#main {
+    width: 80%;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+ul {
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+li {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    border: 1px solid black;
+    list-style: none;
+}
+.icon {
+    cursor: pointer;
+}
+.icon:nth-child(3) {
+    font-weight: bold;
+}

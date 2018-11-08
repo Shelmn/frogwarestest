@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="main">
+    <ul class="list">
+        <li v-for="name in pageinfo">
+            <a :href="'/questinfo/'+name.alias">{{name.alias}}</a>
+        </li>
+    </ul>
+    <ul class="list">
+        <li v-for="name in pageinfo">
+            <span class="icon" v-if="name.status=='SUCCESS'">
+                <a :href="'/questinfo/'+name.alias">&#10004;</a>
+            </span>
+            <span class="icon" v-else-if="name.status=='CRASH'">
+                <a :href="'/questinfo/'+name.alias"> &#10006;</a>
+            </span>
+            <span class="icona" v-else-if="name.status=='NO_DATA'">
+                <a :href="'/questinfo/'+name.alias">&mdash;</a>
+            </span>
+            <span class="icon" v-else>unknown quest</span>
+        </li>
+    </ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
